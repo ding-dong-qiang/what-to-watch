@@ -1,9 +1,7 @@
 1. Create a file named `.env.local` in the root of your project (if it doesn't exist already) and add the following line:
 
 
-```plaintext
-TMDB_API_KEY=63d5d408c8ec1385e2bbc5bdab784582
-```
+NEXT_PUBLIC_TMDB_API_KEY=63d5d408c8ec1385e2bbc5bdab784582
 
 2. Make sure to add `.env.local` to your `.gitignore` file to prevent the API key from being committed to version control.
 3. Restart your Next.js development server for the changes to take effect.
