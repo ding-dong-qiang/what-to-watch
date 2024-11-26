@@ -1,61 +1,19 @@
-// Export metadata for the page, which includes title and description
+// Import global styles for the application
+import '../app/globals.css'
+
+// Metadata for the page, used for SEO purposes and page title
 export const metadata = {
-  // The title of the page, displayed in the browser tab or search engine previews
-  title: 'Movie Recommender',
-  
-  // A short description of the page, useful for SEO and social sharing
-  description: 'Get random movie recommendations based on keywords',
+  title: 'Movie Recommender', // The title that will appear in the browser tab
+  description: 'Get random movie recommendations based on keywords', // A brief description of the page
 }
 
-// Define the RootLayout component that wraps the entire page layout
 export default function RootLayout({ children }) {
+  // The RootLayout component is responsible for defining the basic structure of the page
   return (
+    // The <html> tag specifies the language of the page content
     <html lang="en">
-      {/* Declare the language of the document as English for accessibility and SEO */}
-      <head>
-        {/* Inject global CSS styles directly into the document's head */}
-        <style>{`
-          /* Define a CSS variable for monospaced fonts */
-          :root {
-            --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-              'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-              'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-          }
-          
-          /* Apply box-sizing to include padding and borders in element sizes */
-          * {
-            box-sizing: border-box;
-            padding: 0; /* Reset padding for all elements */
-            margin: 0; /* Reset margin for all elements */
-          }
-
-          /* Ensure no horizontal overflow occurs on the root HTML and body elements */
-          html,
-          body {
-            max-width: 100vw; /* Restrict maximum width to the viewport width */
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-          }
-
-          /* Set default styles for the body element */
-          body {
-            color: rgb(var(--foreground-rgb)); /* Text color, customizable via a CSS variable */
-            background: #f0f0f0; /* Light gray background color for improved readability */
-            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-              Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-            /* Use a set of system fonts for better performance and appearance across platforms */
-          }
-
-          /* Default styling for links */
-          a {
-            color: inherit; /* Inherit text color for consistency */
-            text-decoration: none; /* Remove underline from links */
-          }
-        `}</style>
-      </head>
-      <body>
-        {/* Render the children passed to this layout */}
-        {children}
-      </body>
+      {/* The <body> tag wraps the content of the page, which is passed as 'children' */}
+      <body>{children}</body>
     </html>
   )
 }

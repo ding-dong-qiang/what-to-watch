@@ -54,7 +54,7 @@ export const searchMovies = async (keyword) => {
     // Parse the response JSON
     const data = await response.json();
 
-    console.dir(data);
+    //console.dir(data);
 
     // Return the array of search results
     return data.results;
@@ -89,6 +89,7 @@ export const getMovieDetails = async (movieId) => {
 
     // Parse the response JSON
     const data = await response.json();
+    
 
     // Return the detailed movie object
     return data;
