@@ -164,7 +164,8 @@ const MovieRecommender = () => {
               className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105"
             >
               <img
-                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                // src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                src={movie.poster_path? `https://image.tmdb.org/t/p/w500${movie.poster_path}`: 'https://m.media-amazon.com/images/I/81b+pnSqPSL.png'}
                 alt={movie.title}
                 className="w-full h-80 object-cover"
               />
