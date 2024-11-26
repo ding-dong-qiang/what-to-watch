@@ -1,4 +1,10 @@
+<<<<<<< Updated upstream
 'use client'
+=======
+"use client"
+// Import the MovieRecommender component
+import MovieRecommender from '../components/MovieRecommender';
+>>>>>>> Stashed changes
 
 // Import the useState hook from React to manage component state
 import { useState } from 'react'
