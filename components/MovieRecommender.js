@@ -1,10 +1,9 @@
-'use client'
-
+"use client"
 // Import necessary modules from React and utility functions from tmdbApi.
 // 导入 React 的必要模块和 tmdbApi 的实用函数。
 // Nhập các module cần thiết từ React và các hàm tiện ích từ tmdbApi.
 import React, { useState } from 'react'
-import { searchMovies, getMovieDetails, verifyApiKey } from '../app/utils/tmdbApi'
+import { searchMovies, getMovieDetails, verifyApiKey, getGenreIdByKeyWord,searchMoviesByCategory } from '../app/utils/tmdbApi'
 
 // Define the MovieRecommender component, which handles the movie recommendation functionality.
 // 定义 MovieRecommender 组件，用于处理电影推荐功能。
@@ -64,7 +63,22 @@ const MovieRecommender = () => {
       // Search for movies based on the keyword.
       // 根据关键词搜索电影。
       // Tìm kiếm phim dựa trên từ khóa.
-      const searchResults = await searchMovies(keyword)
+
+      //Tam: Update 03/12 about condition to search if keyword equal 
+      //category search by Category else by keywords
+      const genreId = await getGenreIdByKeyWord(keyword)
+      let rs = "";
+      if(genreId == 0){
+        rs = await searchMovies(keyword)
+      }else{
+        rs = await searchMoviesByCategory(genreId)
+      }
+      const searchResults = rs;
+
+      
+      
+
+      
 
       // Handle case where no movies are found.
       // 处理未找到电影的情况。
