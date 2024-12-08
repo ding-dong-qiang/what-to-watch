@@ -115,10 +115,10 @@ const MovieRecommender = () => {
       {/* Introduction Section */}
 
       <p className="text-lg text-gray-700 text-left max-w-3xl mb-8">
-        Welcome to the WhatToWatch! When you're unsure what movie to watch,
-        we've got you covered with some great options!
+        Welcome to the WhatToWatch! When you&apos;re unsure what movie to watch,
+        we&apos;ve got you covered with some great options!
         <br/>
-        <br/>Enter a genre or theme, and we'll randomly recommend 5 fantastic films you can choose. Click on
+        <br/>Enter a genre or theme, and we&apos;ll randomly recommend 5 fantastic films you can choose. Click on
         a movie to learn more!
       </p>
 
